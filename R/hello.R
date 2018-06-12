@@ -6,7 +6,7 @@
 #'
 mssql_con <- function(host, user, pass, java_version = c("9", "8", "7")) {
   require(RJDBC)
-  if (lenght(java_version) > 1) java_version <- java_version[1]
+  if (length(java_version) > 1) java_version <- java_version[1]
   drv_path <- system.file("driver", package = "mssqlr")
   drv_path <- file.path(
     drv_path,
